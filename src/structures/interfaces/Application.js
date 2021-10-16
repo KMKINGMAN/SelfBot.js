@@ -12,6 +12,7 @@ const AssetTypes = Object.keys(ClientApplicationAssetTypes);
  */
 class Application extends Base {
   constructor(client, data) {
+    data = client;
     super(client);
     this._patch(data);
   }
