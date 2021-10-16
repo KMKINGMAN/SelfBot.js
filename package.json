@@ -1,7 +1,7 @@
 {
-  "name": "discord.js",
-  "version": "13.1.0",
-  "description": "A powerful library for interacting with the Discord API",
+  "name": "selfbot.js",
+  "version": "13.2.0",
+  "description": "Fork From Discordjs and make it support selfbot",
   "main": "./src/index.js",
   "module": "./src/index.mjs",
   "types": "./typings/index.d.ts",
@@ -17,21 +17,11 @@
     }
   },
   "scripts": {
-    "test": "npm run lint && npm run docs:test && npm run lint:typings",
-    "test:typescript": "tsc",
-    "docs": "docgen --source src --custom docs/index.yml --output docs/docs.json",
-    "docs:test": "docgen --source src --custom docs/index.yml",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "lint:typings": "tslint typings/index.d.ts",
-    "prettier": "prettier --write src/**/*.js typings/**/*.ts",
-    "prepublishOnly": "npm run test && gen-esm-wrapper ./src/index.js ./src/index.mjs",
-    "prepare": "is-ci || husky install",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "test": "npm run lint && npm run docs:test && npm run lint:typings"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/discordjs/discord.js.git"
+    "url": "https://github.com/KMKINGMAN/SelfBot.js.git"
   },
   "keywords": [
     "discord",
@@ -41,12 +31,12 @@
     "node",
     "discordapp"
   ],
-  "author": "Amish Shah <amish@shah.gg>",
+  "author": "muhammad rafat kurkar",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/discordjs/discord.js/issues"
+    "url": "https://github.com/KMKINGMAN/SelfBot.js/issues"
   },
-  "homepage": "https://github.com/discordjs/discord.js#readme",
+  "homepage": "https://github.com/KMKINGMAN/SelfBot.js#readme",
   "dependencies": {
     "@discordjs/builders": "^0.5.0",
     "@discordjs/collection": "^0.2.1",
@@ -81,5 +71,8 @@
   "engines": {
     "node": ">=16.6.0",
     "npm": ">=7.0.0"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@kmkingman"
   }
 }
